@@ -18,6 +18,8 @@ public class Carro {
     private String categoria;
     private String imgUrl;
     private String descricaoCurta;
+
+    @Column(columnDefinition = "TEXT")
     private String descricaoLonga;
 
     public Carro(){
