@@ -17,3 +17,26 @@ insert into carros (cavalo_vapor, categoria, descricao_curta, descricao_longa, i
 insert into carros (cavalo_vapor, categoria, descricao_curta, descricao_longa, img_url, marca, modelo, motor) values (510, 'Esportivo', 'Potência máxima', 'Esportivo de luxo com motor potente e design aerodinâmico.', 'https://example.com/sport2.jpg', 'Porsche', '911 Carrera', '3.0 Turbo');
 
 insert into carros (cavalo_vapor, categoria, descricao_curta, descricao_longa, img_url, marca, modelo, motor) values (400, 'Pickup', 'Versátil e potente', 'Uma pickup com força bruta e tecnologia avançada para qualquer terreno.', 'https://example.com/pickup2.jpg', 'Chevrolet', 'Silverado', '6.2 V8');
+
+insert into tb_carro_list (name) VALUES ('Sedã');
+insert into tb_carro_list (name) VALUES ('Hatch');
+insert into tb_carro_list (name) VALUES ('Esportivo');
+insert into tb_carro_list (name) VALUES ('SUV');
+insert into tb_carro_list (name) VALUES ('Pickup');
+
+
+INSERT INTO tb_belonging (list_id, carro_id, position) VALUES (1, 1, 0);
+INSERT INTO tb_belonging (list_id, carro_id, position) VALUES (1, 6, 1);
+
+
+INSERT INTO tb_belonging (list_id, carro_id, position) VALUES (2, 4, 0);
+INSERT INTO tb_belonging (list_id, carro_id, position) VALUES (2, 8, 1);
+
+INSERT INTO tb_belonging (list_id, carro_id, position) VALUES (3, 3, 0);
+INSERT INTO tb_belonging (list_id, carro_id, position) VALUES (3, 9, 1);
+
+INSERT INTO tb_belonging (list_id, carro_id, position) VALUES (4, 2, 0)
+INSERT INTO tb_belonging (list_id, carro_id, position) VALUES (4, 7, 1)
+
+INSERT INTO tb_belonging (list_id, carro_id, position) VALUES (5, 5, 0)
+INSERT INTO tb_belonging (list_id, carro_id, position) VALUES (5, 10, 1)
