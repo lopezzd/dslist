@@ -1,8 +1,9 @@
 package com.example.dslist.controllers;
 
 import com.example.dslist.dto.CarroDTO;
+import com.example.dslist.dto.CarroListDTO;
 import com.example.dslist.dto.CarroMinDTO;
-import com.example.dslist.entities.Carro;
+import com.example.dslist.services.CarroListService;
 import com.example.dslist.services.CarroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,21 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/carros")
-public class CarroController {
+@RequestMapping(value = "/lists")
+public class CarroListController {
 
     @Autowired
-    private CarroService carroService;
+    private CarroListService carroListService;
 
     @GetMapping
-    public List<CarroMinDTO> findAll(){
-        List<CarroMinDTO> result = carroService.findAll();
+    public List<CarroListDTO> findAll(){
+        List<CarroListDTO> result = carroListService.findAll();
         return result;
     }
 
-    @GetMapping(value = "/{id}")
-    public CarroDTO findById(@PathVariable Long id){
-        CarroDTO result = carroService.findById(id);
-        return result;
-    }
 }
