@@ -1,6 +1,7 @@
 package com.example.dslist.dto;
 
 import com.example.dslist.entities.Carro;
+import com.example.dslist.projections.CarroMinProjection;
 import jakarta.persistence.Column;
 
 public class CarroMinDTO {
@@ -20,6 +21,15 @@ public class CarroMinDTO {
         modelo = entity.getModelo();
         imgUrl = entity.getImgUrl();
         descricaoCurta = entity.getDescricaoCurta();
+    }
+
+    public CarroMinDTO(CarroMinProjection projection) {
+        id = projection.getId();
+        marca = projection.getMarca();
+        modelo = projection.getModelo();
+        imgUrl = projection.getImgUrl();
+        descricaoCurta = projection.getDescricaoCurta();
+
     }
 
     public Long getId() {

@@ -20,9 +20,18 @@ public class CarroListController {
     @Autowired
     private CarroListService carroListService;
 
+    @Autowired
+    private CarroService carroService;
+
     @GetMapping
     public List<CarroListDTO> findAll(){
         List<CarroListDTO> result = carroListService.findAll();
+        return result;
+    }
+
+    @GetMapping(value = "/{listId}/carros")
+    public List<CarroMinDTO> findByList(@PathVariable Long listId){
+        List<CarroMinDTO> result = carroService.findByList(listId);
         return result;
     }
 
